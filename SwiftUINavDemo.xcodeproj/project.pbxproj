@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		ECB4BAB3257F716E005FC191 /* SwiftUINavDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB4BAB2257F716E005FC191 /* SwiftUINavDemoApp.swift */; };
-		ECB4BAB5257F716E005FC191 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB4BAB4257F716E005FC191 /* ContentView.swift */; };
+		ECB4BAB5257F716E005FC191 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB4BAB4257F716E005FC191 /* RootView.swift */; };
 		ECB4BAB7257F7170005FC191 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECB4BAB6257F7170005FC191 /* Assets.xcassets */; };
 		ECB4BABA257F7170005FC191 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECB4BAB9257F7170005FC191 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -16,7 +16,7 @@
 /* Begin PBXFileReference section */
 		ECB4BAAF257F716E005FC191 /* SwiftUINavDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUINavDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECB4BAB2257F716E005FC191 /* SwiftUINavDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUINavDemoApp.swift; sourceTree = "<group>"; };
-		ECB4BAB4257F716E005FC191 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		ECB4BAB4257F716E005FC191 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		ECB4BAB6257F7170005FC191 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ECB4BAB9257F7170005FC191 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		ECB4BABB257F7170005FC191 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -53,7 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				ECB4BAB2257F716E005FC191 /* SwiftUINavDemoApp.swift */,
-				ECB4BAB4257F716E005FC191 /* ContentView.swift */,
+				ECB4BAB4257F716E005FC191 /* RootView.swift */,
 				ECB4BAB6257F7170005FC191 /* Assets.xcassets */,
 				ECB4BABB257F7170005FC191 /* Info.plist */,
 				ECB4BAB8257F7170005FC191 /* Preview Content */,
@@ -138,7 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECB4BAB5257F716E005FC191 /* ContentView.swift in Sources */,
+				ECB4BAB5257F716E005FC191 /* RootView.swift in Sources */,
 				ECB4BAB3257F716E005FC191 /* SwiftUINavDemoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
