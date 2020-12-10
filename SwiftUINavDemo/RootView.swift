@@ -35,9 +35,13 @@ struct RootView: View {
 
 struct POTMScreen: View {
     
-    @State var showModal: Bool = false
-    
+    @ObservedObject var playerListVM = PlayerListVM()
     @Binding var selection: Int
+    
+    private var playerOfTheMonth: Player {
+        playerListVM.team.first(where: { $0.isPOTM })!
+    }
+    
     
     var body: some View {
         
@@ -46,13 +50,15 @@ struct POTMScreen: View {
             Text("Player of The Month")
                 .font(.largeTitle)
             
-            Image("Aubameyang")
+            playerOfTheMonth.profilePic
                 .resizable()
                 .scaledToFit()
                 .clipShape(Circle())
                 .overlay(Circle().stroke(Color(red: 0.93, green: 0.94, blue: 0.95), lineWidth: 5))
                 .shadow(radius: 20)
                 .padding(30)
+            
+            Text(playerOfTheMonth.name)
             
             Button(action: {
                 selection = 1
@@ -110,7 +116,7 @@ struct PlayerBioScreen: View {
 struct AboutScreen: View {
     
     @State var showModal: Bool = false
-
+    
     var body: some View {
         Button(action: {
             showModal = true
@@ -137,10 +143,9 @@ final class PlayerListVM: ObservableObject {
         Player(name: "Willian", position: "MF", nationality: "🇧🇷", profilePic: Image("Willian"), isPOTM: false),
         Player(name: "Ainsley Maitland-Niles", position: "MF", nationality: "🇬🇧", profilePic: Image("MaitlandNiles"), isPOTM: false),
         Player(name: "Nicolas Pépé", position: "MF", nationality: "🇨🇮", profilePic: Image("Pepe"), isPOTM: false),
-        Player(name: "Pierre-Emerick Aubameyang", position: "FW", nationality: "🇬🇦", profilePic: Image("Aubameyang"), isPOTM: true),
-        Player(name: "Alexandre Lacazette", position: "FW", nationality: "🇫🇷", profilePic: Image("Lacazette"), isPOTM: false)
+        Player(name: "Pierre-Emerick Aubameyang", position: "FW", nationality: "🇬🇦", profilePic: Image("Aubameyang"), isPOTM: false),
+        Player(name: "Alexandre Lacazette", position: "FW", nationality: "🇫🇷", profilePic: Image("Lacazette"), isPOTM: true)
     ]
-    
 }
 
 struct Player: Identifiable {
