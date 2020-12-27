@@ -3,10 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC6F9B7925989B4E00522432 /* PlayerListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6F9B7825989B4E00522432 /* PlayerListVM.swift */; };
+		EC6F9B7C25989B6E00522432 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6F9B7B25989B6E00522432 /* Player.swift */; };
+		EC6F9B7F25989B8800522432 /* AboutScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6F9B7E25989B8800522432 /* AboutScreen.swift */; };
+		EC6F9B8225989B9D00522432 /* PlayerBioScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6F9B8125989B9D00522432 /* PlayerBioScreen.swift */; };
+		EC6F9B8525989BB900522432 /* TeamScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6F9B8425989BB900522432 /* TeamScreen.swift */; };
+		EC6F9B8825989BCF00522432 /* POTMScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6F9B8725989BCF00522432 /* POTMScreen.swift */; };
+		EC6F9B952598A7E800522432 /* UIComponents in Frameworks */ = {isa = PBXBuildFile; productRef = EC6F9B942598A7E800522432 /* UIComponents */; };
 		ECB4BAB3257F716E005FC191 /* SwiftUINavDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB4BAB2257F716E005FC191 /* SwiftUINavDemoApp.swift */; };
 		ECB4BAB5257F716E005FC191 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB4BAB4257F716E005FC191 /* RootView.swift */; };
 		ECB4BAB7257F7170005FC191 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECB4BAB6257F7170005FC191 /* Assets.xcassets */; };
@@ -14,6 +21,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EC6F9B7825989B4E00522432 /* PlayerListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerListVM.swift; sourceTree = "<group>"; };
+		EC6F9B7B25989B6E00522432 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		EC6F9B7E25989B8800522432 /* AboutScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutScreen.swift; sourceTree = "<group>"; };
+		EC6F9B8125989B9D00522432 /* PlayerBioScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerBioScreen.swift; sourceTree = "<group>"; };
+		EC6F9B8425989BB900522432 /* TeamScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamScreen.swift; sourceTree = "<group>"; };
+		EC6F9B8725989BCF00522432 /* POTMScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POTMScreen.swift; sourceTree = "<group>"; };
+		EC6F9B902598A3BF00522432 /* UIComponents */ = {isa = PBXFileReference; lastKnownFileType = text; name = UIComponents; path = Modules/UIComponents; sourceTree = SOURCE_ROOT; };
 		ECB4BAAF257F716E005FC191 /* SwiftUINavDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUINavDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECB4BAB2257F716E005FC191 /* SwiftUINavDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUINavDemoApp.swift; sourceTree = "<group>"; };
 		ECB4BAB4257F716E005FC191 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -27,17 +41,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC6F9B952598A7E800522432 /* UIComponents in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EC6F9B8D25989FFE00522432 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ECB4BAB4257F716E005FC191 /* RootView.swift */,
+				EC6F9B8725989BCF00522432 /* POTMScreen.swift */,
+				EC6F9B8425989BB900522432 /* TeamScreen.swift */,
+				EC6F9B7E25989B8800522432 /* AboutScreen.swift */,
+				EC6F9B8125989B9D00522432 /* PlayerBioScreen.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EC6F9B932598A7E800522432 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		ECB4BAA6257F716E005FC191 = {
 			isa = PBXGroup;
 			children = (
 				ECB4BAB1257F716E005FC191 /* SwiftUINavDemo */,
 				ECB4BAB0257F716E005FC191 /* Products */,
+				EC6F9B932598A7E800522432 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,8 +87,11 @@
 		ECB4BAB1257F716E005FC191 /* SwiftUINavDemo */ = {
 			isa = PBXGroup;
 			children = (
+				EC6F9B902598A3BF00522432 /* UIComponents */,
 				ECB4BAB2257F716E005FC191 /* SwiftUINavDemoApp.swift */,
-				ECB4BAB4257F716E005FC191 /* RootView.swift */,
+				EC6F9B8D25989FFE00522432 /* Views */,
+				EC6F9B7825989B4E00522432 /* PlayerListVM.swift */,
+				EC6F9B7B25989B6E00522432 /* Player.swift */,
 				ECB4BAB6257F7170005FC191 /* Assets.xcassets */,
 				ECB4BABB257F7170005FC191 /* Info.plist */,
 				ECB4BAB8257F7170005FC191 /* Preview Content */,
@@ -85,6 +123,9 @@
 			dependencies = (
 			);
 			name = SwiftUINavDemo;
+			packageProductDependencies = (
+				EC6F9B942598A7E800522432 /* UIComponents */,
+			);
 			productName = SwiftUINavDemo;
 			productReference = ECB4BAAF257F716E005FC191 /* SwiftUINavDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -138,8 +179,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC6F9B8225989B9D00522432 /* PlayerBioScreen.swift in Sources */,
+				EC6F9B8825989BCF00522432 /* POTMScreen.swift in Sources */,
 				ECB4BAB5257F716E005FC191 /* RootView.swift in Sources */,
+				EC6F9B8525989BB900522432 /* TeamScreen.swift in Sources */,
+				EC6F9B7925989B4E00522432 /* PlayerListVM.swift in Sources */,
+				EC6F9B7C25989B6E00522432 /* Player.swift in Sources */,
 				ECB4BAB3257F716E005FC191 /* SwiftUINavDemoApp.swift in Sources */,
+				EC6F9B7F25989B8800522432 /* AboutScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +373,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EC6F9B942598A7E800522432 /* UIComponents */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UIComponents;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = ECB4BAA7257F716E005FC191 /* Project object */;
 }
