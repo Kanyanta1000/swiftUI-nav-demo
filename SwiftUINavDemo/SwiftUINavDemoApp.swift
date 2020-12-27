@@ -27,6 +27,7 @@ struct SwiftUINavDemoApp: App {
     var body: some Scene {
         WindowGroup {
             RootView()
+                .environmentObject(Router())
         }
         .onChange(of: scenePhase) {
             newScenePhase in

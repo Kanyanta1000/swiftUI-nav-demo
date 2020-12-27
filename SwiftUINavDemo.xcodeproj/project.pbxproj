@@ -18,6 +18,7 @@
 		ECB4BAB5257F716E005FC191 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB4BAB4257F716E005FC191 /* RootView.swift */; };
 		ECB4BAB7257F7170005FC191 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECB4BAB6257F7170005FC191 /* Assets.xcassets */; };
 		ECB4BABA257F7170005FC191 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECB4BAB9257F7170005FC191 /* Preview Assets.xcassets */; };
+		ECD224432598E50800B798AC /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD224422598E50800B798AC /* Router.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		ECB4BAB6257F7170005FC191 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ECB4BAB9257F7170005FC191 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		ECB4BABB257F7170005FC191 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECD224422598E50800B798AC /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				EC6F9B8D25989FFE00522432 /* Views */,
 				EC6F9B7825989B4E00522432 /* PlayerListVM.swift */,
 				EC6F9B7B25989B6E00522432 /* Player.swift */,
+				ECD224422598E50800B798AC /* Router.swift */,
 				ECB4BAB6257F7170005FC191 /* Assets.xcassets */,
 				ECB4BABB257F7170005FC191 /* Info.plist */,
 				ECB4BAB8257F7170005FC191 /* Preview Content */,
@@ -183,6 +186,7 @@
 				EC6F9B8825989BCF00522432 /* POTMScreen.swift in Sources */,
 				ECB4BAB5257F716E005FC191 /* RootView.swift in Sources */,
 				EC6F9B8525989BB900522432 /* TeamScreen.swift in Sources */,
+				ECD224432598E50800B798AC /* Router.swift in Sources */,
 				EC6F9B7925989B4E00522432 /* PlayerListVM.swift in Sources */,
 				EC6F9B7C25989B6E00522432 /* Player.swift in Sources */,
 				ECB4BAB3257F716E005FC191 /* SwiftUINavDemoApp.swift in Sources */,

@@ -12,6 +12,6 @@ struct Player: Identifiable {
     let name: String
     let position: String
     let nationality: String
-    let profilePic: Image
+    let profilePic: Image 
     let isPOTM: Bool
 }

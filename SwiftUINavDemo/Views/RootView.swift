@@ -10,18 +10,17 @@ import SwiftUI
 
 struct RootView: View {
     
-    @State private var selectedTab = 1
-    @State private var selectedRow: Int?
+    @EnvironmentObject var router: Router
     
     var body: some View {
         
-        TabView(selection: $selectedTab) {
-            POTMScreen(selection: $selectedTab, selectedPlayer: $selectedRow).tabItem {
+        TabView(selection: $router.tabSelection) {
+            POTMScreen().tabItem {
                 Image(systemName: "person.crop.circle")
                 Text("POTM")
             }.tag(0)
             
-            TeamScreen(selectedId: selectedRow).tabItem {
+            TeamScreen().tabItem {
                 Image(systemName: "person.3.fill")
                 Text("Team Sheet")
             }.tag(1)

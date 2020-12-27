@@ -8,43 +8,55 @@
 import SwiftUI
 
 struct TeamScreen: View {
+    @EnvironmentObject var router: Router
+    
     @ObservedObject var playerListVM = PlayerListVM()
-    @State private var selectedView: Int?
     
-    private let initialSelection: Int?
-    
-    init(selectedId: Int? = 1) {
-        self.initialSelection = selectedId
-    }
+    init () {}
     
     var body: some View {
         
+        let layout = [
+            GridItem(.flexible()),
+            GridItem(.flexible()),
+            GridItem(.flexible())
+        ]
+        
         NavigationView {
-            List() {
-                ForEach(playerListVM.team) { player in
-                    NavigationLink(destination: PlayerBioScreen(player: player), tag: player.id, selection: self.$selectedView) {
-                        cell(player: player)
+            ScrollView {
+                LazyVGrid(columns: layout, spacing: 15) {
+                    ForEach(playerListVM.team) { player in
+                        NavigationLink(destination: PlayerBioScreen(player: player), tag: player.id, selection: $router.playerSelection) {
+                            cell(player: player)
+                        }.onTapGesture {
+                            router.playerSelection = player.id
+                        }
                     }
+                    .padding()
                 }
             }
+
+            
             .navigationBarTitle("Team Sheet")
-        }
-        
-        .onAppear {
-            if let initialSelection = initialSelection {
-                selectedView = initialSelection
-            } else {
-                selectedView = playerListVM.team.first?.id
-            }
         }
     }
     
     func cell(player: Player) -> some View {
-        
-        HStack{
-            Text(player.position)
-            Text(player.nationality)
+        VStack{
+            player.profilePic 
+                .resizable()
+                .scaledToFit()
+                //                .frame(height: 60)
+                .clipShape(Circle())
+                .overlay(Circle().stroke(Color(red: 0.93, green: 0.94, blue: 0.95), lineWidth: 5))
+                .shadow(radius: 20)
+            
+            HStack{
+                Text(player.position)
+                Text(player.nationality)
+            }
             Text(player.name).bold()
         }
     }
 }
+

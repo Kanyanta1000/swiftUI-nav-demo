@@ -10,8 +10,7 @@ import SwiftUI
 struct POTMScreen: View {
     
     @ObservedObject var playerListVM = PlayerListVM()
-    @Binding var selection: Int
-    @Binding var selectedPlayer: Int?
+    @EnvironmentObject var router: Router
     
     private var playerOfTheMonth: Player {
         playerListVM.team.first(where: { $0.isPOTM })!
@@ -35,8 +34,9 @@ struct POTMScreen: View {
             Text(playerOfTheMonth.name)
             
             Button(action: {
-                selection = 1
-                selectedPlayer = playerOfTheMonth.id
+                
+                router.tabSelection = 1
+                router.playerSelection = playerOfTheMonth.id
                 
             }) {
                 Text("Player Bio")
